@@ -18,12 +18,29 @@ As a stretch goal, try adding the park's address to the results.*/
 const apiKey = "B84sI5wVOXQwODDsa5G0KNgJCajRBXCapV0mJhw3";
 const searchURL = `https://developer.nps.gov/api/v1/parks?parkCode=acad&api_key=${apiKey}`;
 
+function formatQueryParams(params) {
+    const queryItems = Object.keys(params).map(key => `${key}=${params[key]}`)
+    return queryItems.join('&');
+}
+
+
+
+
+
+
+
+
+
+
+
+
 function getParkInfo() {
     const options = {
         headers: new Headers({
             "X-Api-Key": apiKey})
         };
-        
+    
+       
 }
 
 
