@@ -7,18 +7,30 @@
     <title>Document</title>
   </head>
   <body>
-    <main>
-      <form>
-        <label for="searchBox">Search Repository</label>
+    <div class="container">
+      <h1>Park finder</h1>
+
+      <form id="js-form">
+        <label for="search-term">Enter State of Park</label>
+        <input type="text" name="search-term" id="js-search-term" required />
+
+        <label for="max-results">Maximum results to return</label>
         <input
-          id="searchBox"
-          name="searchBox"
-          placeholder="Enter Github Username"
+          type="number"
+          name="max-results"
+          id="js-max-results"
+          value="10"
         />
-        <button type="submit">Submit</button>
+
+        <input type="submit" value="Go!" />
       </form>
-      <div id="display"></div>
-    </main>
+
+      <p id="js-error-message" class="error-message"></p>
+      <section id="results" class="hidden">
+        <h2>Search results</h2>
+        <ul id="results-list"></ul>
+      </section>
+    </div>
     <script
       src="https://code.jquery.com/jquery-3.4.0.js"
       integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo="
